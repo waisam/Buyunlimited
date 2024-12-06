@@ -1,0 +1,15 @@
+## Interface: 110005
+## Title: |cff00ff00BuyUnlimited|r
+## Title-ruRU: |cff00ff00BuyUnlimited|r
+## Notes: |cffffcc00Advanced purchasing system for exact amounts of items.|r|n|cff999999Shift + Right Click on item to buy exact amount.|r
+## Notes-ruRU: |cffffcc00Продвинутая система покупок для точного количества предметов.|r|n|cff999999Shift + ПКМ на предмете для покупки точного количества.|r
+## Author: |cff33ccffsubVERGE|r
+## Version: |cffff00001.3|r
+## DefaultState: enabled
+## IconTexture: Interface\AddOns\BuyUnlimited\BuyUnlimited.blp
+
+## SavedVariables: BuyUnlimitedDB
+
+BuyUnlimited.xml
+Changelog.lua
+BuyUnlimited.lua
