@@ -403,11 +403,13 @@ local function FormatCurrency(currencyInfo, count)
     end
 end
 
+-- just called by 'HandleShiftRightClick' function below, MerchantItemButton only.
 local function DisableStackSplit()
     if _G["StackSplitFrame"] then
         _G["StackSplitFrame"]:Hide()
-        _G["StackSplitFrame"].RegisterForClicks = function() end
-        _G["StackSplitFrame"].Show = function() end
+        -- don't override the default function, they can be using on container frame.
+        -- _G["StackSplitFrame"].RegisterForClicks = function() end
+        -- _G["StackSplitFrame"].Show = function() end
     end
 end
 
@@ -1177,7 +1179,8 @@ end
 BuyUnlimited:SetScript("OnEvent", function(self, event, ...)
     if event == "ADDON_LOADED" and ... == "BuyUnlimited" then
         InitSavedVariables()
-        DisableStackSplit()
+        -- Don't disable stack split frame on addon loaded.
+        -- DisableStackSplit()
         for i = 1, MERCHANT_ITEMS_PER_PAGE do
             local button = _G["MerchantItem"..i.."ItemButton"]
             if button then
